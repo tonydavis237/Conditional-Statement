@@ -86,14 +86,23 @@ namespace Conditional_Statement
                     // Display the correct letter grade
                     Console.WriteLine("Your lettergrade based from the syllabus is D-");
                 }
-                else
+                else if (grade < 60) 
                 {
                     // Display the correct letter grade
                     Console.WriteLine("Your lettergrade based from the syllabus is F");
-                }             
-            } // End of try
+                }
+            
+            else
+            {   // Displays an error message that the integer value is not within the parameters
+                Console.WriteLine("You have entered an integer value not within the restricted parameters");
+                Console.WriteLine("Please retry and enter an integer value for your expected letter grade with the correct parameters!");
+                Console.WriteLine("Press any key to exit the program and try again!");
+            }
+        }
+        // Catches incorrect data that was input by user
             catch
             {
+        // Displays an error message when incorrect data type is inputed
                 Console.WriteLine("You inputted the incorrect data type :(");
                 Console.WriteLine("Please use an integer data type for the grade you are expecting");
                 Console.WriteLine("Press any key to exit the program and try again...");
